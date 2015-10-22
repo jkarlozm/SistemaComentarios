@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!--Hojas estilo-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">	
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">		
+		<link rel="stylesheet" href="css/hojaestilo.css">
+		<title>Respuestas</title>
+	</head>
+	<body>
+		<!--Menu-->
+		<nav class="navbar navbar-personalizado">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+						<span class="icon-bar app-bar"></span>
+						<span class="icon-bar app-bar"></span>
+						<span class="icon-bar app-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand link-personalizado">Empresa</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="nav navbar-nav nav-personalizado">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="preguntas.html">Preguntas</a></li>				
+					</ul>
+					<ul class="nav navbar-nav navbar-right nav-personalizado">
+						<li><a href="#">
+							<div class="app-userActive">
+								<figure class="app-activado">
+									<img src="img/user.png" alt="Usuario" class="img-responsive">
+								</figure>
+								<span>@Karloz</span>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+					<div class="app-pregunta">
+						<div class="row">
+							<div class="col-xs-12">
+								<p>Publicado: 4 de Octubre de 2015</p>
+							</div>
+							<div class="col-xs-12">
+								<h3 class="app-centrar">
+									¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+								</h3>
+								<span>Descripción</span>
+								<p class="app-justificar">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero mollitia nostrum beatae ab assumenda provident quod dignissimos laborum sed quasi soluta totam, quis neque excepturi quas deleniti illum placeat temporibus.
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse animi eaque temporibus dolor odit sed natus alias, saepe, quidem tenetur, sapiente dicta provident, unde inventore reiciendis quia similique rem exercitationem.
+								</p>
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#miModal" id="idModal">Responder</button>
+							<p class="app-top">Respuestas</p>
+							<div class="modal" id="miModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Realiza tu pregunta</h4>
+										</div>
+										<div class="modal-body">
+											<form>
+												<textarea rows="6" class="form-control dimension"></textarea>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<button class="btn btn-primary" id="aceptar">Aceptar</button>
+											<button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="media-list media1">
+						<li class="media">
+							<a href="#" class="pull-left">
+								<img src="img/user.png" alt="Usuario" class="media-objet img-user" data-toggle="tooltip" data-placement="bottom" title="@Karloz">
+							</a>
+							<div class="media-body">
+								<p>Publicado hace 20 minutos</p>
+								<p class="app-justificar">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est molestiae atque sequi distinctio earum perferendis, nihil voluptatem, aliquam reprehenderit sit illo sapiente enim similique dignissimos repudiandae magnam consequuntur eum voluptas!</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="hidden-xs hidden-sm hidden-md col-lg-4">
+					<div class="app-pregunta">
+						<div class="list-group">
+							<a href="#" class="list-group-item active app-centrar">Top 10 de preguntas frecuentes</a>
+							<a href="#" class="list-group-item">1. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">2. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">3. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">4. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">5. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">6. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">7. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">8. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">9. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+							<a href="#" class="list-group-item">10. ¿Lorem ipsum dolor sit amet, consectetur adipisicing elit?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="app-footer">
+			<div class="container">
+				<p>Derechos Reservador @Karloz</p>
+			</div>
+		</footer>
+		<script src="js/jquery.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			/*Animacion madal*/
+			$('#miModal').modal('hide');
+			$('#idModal').on('click', animationModal);
+			val = 0;
+			function animationModal () {
+				$('.modal-content').css({'transform':'scale('+val+')'});
+				val = val+0.2;
+				if (val<=1) {
+					setTimeout('animationModal()', 40)
+				} 
+				else{
+					val = 0;
+				}
+			}
+
+			/*Barra de progreso*/
+			$("#aceptar").on('click', barraprogreso);
+			valor = 0;
+
+			function barraprogreso () {
+				$(".modal-content").hide();
+				$(".modal-dialog").html('<div class="progress"><div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"><span class="sr-only"></span></div></div>');
+				avanzandoBarra();
+			};
+			function avanzandoBarra () {
+				valor = valor + 10;
+				$('.progress-bar').css({'width':valor+'%'});
+				if (valor == '200') {
+					$("#miModal").modal('hide');
+					location.reload();
+				}
+				setTimeout('avanzandoBarra()', 100);
+			};
+
+		</script>
+	</body>
+</html>
